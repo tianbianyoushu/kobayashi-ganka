@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>こばやし眼科医院 | 眼科 | 新潟県長岡市</title>
+  <meta name="description" content="こばやし眼科医院。新潟県長岡市曲新町にある眼科専門医院です。白内障・緑内障・ドライアイ・コンタクトレンズ処方など。土曜診療・駐車場完備。">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ══════════════════════════════════════
+       CSS 変数
+    ══════════════════════════════════════ */
+    :root {
+      --blue:       #1A6DB5;
+      --blue-dark:  #144F87;
+      --blue-mid:   #2E86D4;
+      --blue-light: #D8ECFA;
+      --blue-pale:  #EEF6FD;
+      --sky:        #4FA8E0;
+      --teal:       #1E8FA0;
+      --red:        #D9534F;
+      --red-light:  #FFECEB;
+      --green:      #28A070;
+      --green-light:#E6F5EF;
+      --gold:       #D4880A;
+      --gold-light: #FFF3DC;
+      --text:       #2A2A2A;
+      --text-2:     #666666;
+      --text-3:     #999999;
+      --border:     #C5DCF0;
+      --bg:         #FFFFFF;
+      --bg-2:       #F4F9FD;
+      --nav-h:      72px;
+    }
+
+    /* ══════════════════════════════════════
+       リセット・ベース
+    ══════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+      font-size: 15px;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.75;
+    }
+    img { display: block; width: 100%; object-fit: cover; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .section-wrap { padding: 72px 0; }
+    .section-title {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    .section-title h2 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--blue-dark);
+      letter-spacing: 0.06em;
+    }
+    .section-title .en {
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      color: var(--sky);
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+    .section-title .line {
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: var(--sky);
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    /* ══════════════════════════════════════
+       ヘッダー
+    ══════════════════════════════════════ */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      height: var(--nav-h);
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      transition: box-shadow 0.3s;
+    }
+    .site-header.scrolled { box-shadow: 0 2px 16px rgba(0,50,120,.10); }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .logo { flex: 0 0 auto; }
+    .logo-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--blue-dark);
+      letter-spacing: 0.04em;
+      line-height: 1.2;
+    }
+    .logo-name span {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--blue);
+      display: block;
+      letter-spacing: 0.08em;
+      margin-top: 2px;
+    }
+    .global-nav { flex: 1 1 auto; display: flex; justify-content: center; gap: 4px; }
+    .global-nav a {
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 4px;
+      color: var(--text);
+      transition: color 0.2s, background 0.2s;
+    }
+    .global-nav a:hover { color: var(--blue); background: var(--blue-pale); }
+    .header-tel {
+      flex: 0 0 auto;
+      text-align: right;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .header-tel .tel-box a {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--blue-dark);
+      letter-spacing: 0.04em;
+    }
+    .header-tel .tel-label {
+      font-size: 11px;
+      color: var(--text-2);
+      letter-spacing: 0.06em;
+    }
+    .header-tel .reservation-btn {
+      display: inline-block;
+      background: var(--blue);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 4px;
+      letter-spacing: 0.06em;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .header-tel .reservation-btn:hover { background: var(--blue-dark); }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--blue-dark);
+      border-radius: 2px;
+      transition: transform 0.3s;
+    }
+
+    /* ══════════════════════════════════════
+       モバイルナビ
+    ══════════════════════════════════════ */
+    .mobile-nav {
+      position: fixed;
+      top: var(--nav-h);
+      left: 0;
+      right: 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      z-index: 999;
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text);
+      padding: 12px 0;
+      border-bottom: 1px solid var(--blue-light);
+    }
+    .mobile-nav .tel-sp {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--blue-dark);
+      padding: 14px 0 8px;
+    }
+
+    /* ══════════════════════════════════════
+       ヒーロースライダー
+    ══════════════════════════════════════ */
+    .hero {
+      margin-top: var(--nav-h);
+      position: relative;
+      overflow: hidden;
+      height: 520px;
+    }
+    .slider-track {
+      display: flex;
+      height: 100%;
+      transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .slide {
+      flex: 0 0 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    .slide-bg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    /* プレースホルダースライド */
+    .slide-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+      font-size: 14px;
+      color: rgba(255,255,255,.7);
+      letter-spacing: 0.1em;
+    }
+    .slide-placeholder .ph-icon { font-size: 56px; opacity: 0.5; }
+    .slide-1 { background: linear-gradient(135deg, #1A4A7A 0%, #2E86D4 60%, #4FC3E0 100%); }
+    .slide-2 { background: linear-gradient(135deg, #0D3B5E 0%, #1A6DB5 55%, #3AA8C8 100%); }
+    .slide-3 { background: linear-gradient(135deg, #143D68 0%, #1E7FAC 60%, #45B5D0 100%); }
+    .slide-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 36px 48px;
+      background: linear-gradient(transparent, rgba(0,20,50,.5));
+    }
+    .slide-caption h2 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 30px;
+      font-weight: 500;
+      color: #fff;
+      letter-spacing: 0.1em;
+      text-shadow: 0 2px 8px rgba(0,0,0,.3);
+    }
+    .slide-caption p {
+      font-size: 14px;
+      color: rgba(255,255,255,.85);
+      margin-top: 8px;
+      letter-spacing: 0.06em;
+    }
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,.25);
+      border: 1px solid rgba(255,255,255,.4);
+      color: #fff;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+      z-index: 10;
+      backdrop-filter: blur(4px);
+    }
+    .slider-btn:hover { background: rgba(255,255,255,.45); }
+    .slider-btn.prev { left: 16px; }
+    .slider-btn.next { right: 16px; }
+    .slider-dots {
+      position: absolute;
+      bottom: 16px;
+      right: 20px;
+      display: flex;
+      gap: 8px;
+      z-index: 10;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.45);
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .dot.active { background: #fff; transform: scale(1.2); }
+
+    /* ══════════════════════════════════════
+       お知らせ（帯）
+    ══════════════════════════════════════ */
+    .news-bar {
+      background: var(--blue-pale);
+      border-bottom: 1px solid var(--blue-light);
+      padding: 0;
+    }
+    .news-bar-inner {
+      display: flex;
+      align-items: stretch;
+    }
+    .news-bar-label {
+      background: var(--blue);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      min-height: 50px;
+    }
+    .news-bar-list {
+      flex: 1;
+      overflow: hidden;
+    }
+    .news-bar-list ul {
+      padding: 0;
+      margin: 0;
+    }
+    .news-bar-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--blue-light);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .news-bar-list li:last-child { border-bottom: none; }
+    .news-bar-list .date { color: var(--text-2); white-space: nowrap; font-size: 12px; }
+    .badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 2px;
+      white-space: nowrap;
+      letter-spacing: 0.08em;
+    }
+    .badge-important { background: var(--red); color: #fff; }
+    .badge-info      { background: var(--blue); color: #fff; }
+    .badge-new       { background: var(--teal); color: #fff; }
+
+    /* ══════════════════════════════════════
+       診療時間 + カレンダー　2カラム
+    ══════════════════════════════════════ */
+    .hours-calendar-section {
+      background: var(--bg-2);
+    }
+    .hours-calendar-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    /* 診療時間 */
+    .hours-card {
+      background: var(--bg);
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0,50,120,.07);
+      overflow: hidden;
+    }
+    .hours-card-head {
+      background: var(--blue);
+      color: #fff;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hours-card-head h3 { font-size: 17px; font-weight: 700; letter-spacing: 0.06em; }
+    .hours-card-head .icon { font-size: 22px; }
+    .hours-card-body { padding: 20px 24px 24px; }
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .hours-table th {
+      background: var(--blue-pale);
+      color: var(--blue-dark);
+      font-weight: 700;
+      padding: 10px 8px;
+      text-align: center;
+      border: 1px solid var(--border);
+      font-size: 13px;
+    }
+    .hours-table td {
+      border: 1px solid var(--border);
+      text-align: center;
+      padding: 10px 8px;
+      font-size: 13px;
+    }
+    .hours-table td.check { color: var(--blue); font-size: 18px; font-weight: 700; }
+    .hours-table td.cross { color: var(--text-3); font-size: 18px; }
+    .hours-table td.thu  { background: #F5F5F5; color: var(--text-3); }
+    .hours-table td.sat  { color: var(--blue); font-size: 18px; font-weight: 700; }
+    .hours-table .col-thu { background: #F9F9F9; }
+    .hours-table .col-sun { background: #FFF5F5; }
+    .hours-note {
+      margin-top: 14px;
+      font-size: 12px;
+      color: var(--text-2);
+      line-height: 1.8;
+      background: var(--blue-pale);
+      border-radius: 6px;
+      padding: 12px 14px;
+    }
+    .hours-note ul { list-style: disc; padding-left: 18px; }
+    .hours-note li { margin-bottom: 2px; }
+
+    /* カレンダー */
+    .calendar-card {
+      background: var(--bg);
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0,50,120,.07);
+      overflow: hidden;
+    }
+    .calendar-card-head {
+      background: var(--blue);
+      color: #fff;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .cal-title-wrap { display: flex; align-items: center; gap: 12px; }
+    .cal-title-wrap .icon { font-size: 22px; }
+    .cal-title-wrap h3 { font-size: 17px; font-weight: 700; letter-spacing: 0.06em; }
+    .cal-nav { display: flex; align-items: center; gap: 12px; }
+    .cal-nav button {
+      background: rgba(255,255,255,.25);
+      border: 1px solid rgba(255,255,255,.4);
+      color: #fff;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+    .cal-nav button:hover { background: rgba(255,255,255,.45); }
+    .cal-month {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      min-width: 100px;
+      text-align: center;
+    }
+    .calendar-card-body { padding: 16px 20px 20px; }
+    .cal-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .cal-table th {
+      font-size: 12px;
+      font-weight: 700;
+      text-align: center;
+      padding: 6px 0;
+      color: var(--text-2);
+    }
+    .cal-table th.sun { color: var(--red); }
+    .cal-table th.sat { color: var(--blue); }
+    .cal-table td {
+      text-align: center;
+      padding: 5px 3px;
+      font-size: 13px;
+    }
+    .cal-day {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .day-open   { color: var(--text); }
+    .day-closed { color: var(--text-3); background: #F0F0F0; text-decoration: line-through; border-radius: 50%; }
+    .day-sun    { color: var(--red); }
+    .day-holiday { color: var(--red); background: var(--red-light); border-radius: 50%; }
+    .day-thu    { color: var(--text-3); background: #F0F0F0; border-radius: 50%; text-decoration: line-through; }
+    .day-sat    { color: var(--blue); }
+    .day-today  { background: var(--blue); color: #fff !important; border-radius: 50%; font-weight: 700; }
+    .day-sat.day-today { background: var(--blue-mid); color: #fff !important; }
+    .cal-legend {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+      font-size: 11px;
+      color: var(--text-2);
+      padding: 10px 12px;
+      background: var(--bg-2);
+      border-radius: 6px;
+    }
+    .cal-legend-item { display: flex; align-items: center; gap: 5px; }
+    .leg-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .leg-open    { background: var(--blue); }
+    .leg-sat     { background: var(--blue-light); border: 1px solid var(--blue); }
+    .leg-closed  { background: #E0E0E0; }
+    .leg-holiday { background: var(--red-light); border: 1px solid var(--red); }
+
+    /* ══════════════════════════════════════
+       診療内容
+    ══════════════════════════════════════ */
+    .treatment-section { background: var(--bg); }
+    .treatment-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .treatment-card {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 20px 24px;
+      text-align: center;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .treatment-card:hover {
+      box-shadow: 0 8px 28px rgba(0,60,150,.10);
+      transform: translateY(-3px);
+    }
+    .treatment-card .t-icon {
+      font-size: 44px;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+    .treatment-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--blue-dark);
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
+    }
+    .treatment-card p {
+      font-size: 13px;
+      color: var(--text-2);
+      line-height: 1.7;
+    }
+
+    /* ══════════════════════════════════════
+       特徴
+    ══════════════════════════════════════ */
+    .features-section { background: var(--blue-pale); }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .feature-item {
+      background: var(--bg);
+      border-radius: 10px;
+      padding: 28px 18px 24px;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(0,60,150,.06);
+    }
+    .feature-item .f-icon { font-size: 38px; margin-bottom: 12px; line-height: 1; }
+    .feature-item h3 { font-size: 14px; font-weight: 700; color: var(--blue-dark); margin-bottom: 8px; }
+    .feature-item p { font-size: 12px; color: var(--text-2); line-height: 1.7; }
+
+    /* ══════════════════════════════════════
+       アクセス
+    ══════════════════════════════════════ */
+    .access-section { background: var(--bg); }
+    .access-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .access-info h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--blue-dark);
+      margin-bottom: 20px;
+    }
+    .access-info dl { display: grid; grid-template-columns: 5em 1fr; gap: 12px 16px; }
+    .access-info dt {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--blue);
+      padding-top: 2px;
+    }
+    .access-info dd { font-size: 14px; color: var(--text); }
+    .access-info dd a { color: var(--blue); text-decoration: underline; }
+    .map-wrap {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      height: 360px;
+      background: #E8EEF4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+      color: var(--text-2);
+      font-size: 13px;
+      letter-spacing: 0.08em;
+    }
+    .map-wrap .map-icon { font-size: 48px; opacity: 0.35; }
+    /* Googleマップiframeを追加する場合はこのdivを置き換えてください */
+    /* <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy"></iframe> */
+
+    /* ══════════════════════════════════════
+       フッター
+    ══════════════════════════════════════ */
+    footer {
+      background: var(--blue-dark);
+      color: rgba(255,255,255,.85);
+      padding: 48px 0 24px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid rgba(255,255,255,.15);
+    }
+    .footer-logo-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .footer-logo-name span {
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(255,255,255,.6);
+      letter-spacing: 0.1em;
+      margin-top: 4px;
+    }
+    .footer-desc { font-size: 13px; color: rgba(255,255,255,.65); line-height: 1.8; margin-bottom: 16px; }
+    .footer-tel-large {
+      font-size: 26px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.05em;
+    }
+    .footer-tel-large a { color: inherit; }
+    .footer-tel-label { font-size: 11px; color: rgba(255,255,255,.5); letter-spacing: 0.1em; margin-top: 4px; }
+    .footer-col h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: rgba(255,255,255,.9);
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255,255,255,.15);
+    }
+    .footer-col ul { display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul a { font-size: 13px; color: rgba(255,255,255,.65); transition: color 0.2s; }
+    .footer-col ul a:hover { color: #fff; }
+    .footer-col .info-row { font-size: 13px; color: rgba(255,255,255,.65); margin-bottom: 8px; line-height: 1.6; }
+    .footer-col .info-row strong { color: rgba(255,255,255,.85); }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      font-size: 11px;
+      color: rgba(255,255,255,.4);
+      letter-spacing: 0.06em;
+    }
+
+    /* ══════════════════════════════════════
+       ページトップボタン
+    ══════════════════════════════════════ */
+    .pagetop {
+      position: fixed;
+      bottom: 28px;
+      right: 24px;
+      width: 44px;
+      height: 44px;
+      background: var(--blue);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(0,60,150,.3);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s, transform 0.3s;
+      z-index: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .pagetop.show { opacity: 1; pointer-events: auto; }
+    .pagetop:hover { transform: translateY(-3px); }
+
+    /* ══════════════════════════════════════
+       レスポンシブ
+    ══════════════════════════════════════ */
+    @media (max-width: 900px) {
+      .global-nav { display: none; }
+      .header-tel .reservation-btn { display: none; }
+      .header-tel .tel-box a { font-size: 18px; }
+      .hamburger { display: flex; }
+      .hero { height: 380px; }
+      .slide-caption { padding: 20px 24px; }
+      .slide-caption h2 { font-size: 22px; }
+      .hours-calendar-grid { grid-template-columns: 1fr; gap: 24px; }
+      .treatment-grid { grid-template-columns: repeat(2, 1fr); }
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .access-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+    }
+    @media (max-width: 600px) {
+      :root { --nav-h: 60px; }
+      .logo-name { font-size: 16px; }
+      .header-tel .tel-box a { font-size: 15px; }
+      .hero { height: 300px; }
+      .section-title h2 { font-size: 22px; }
+      .treatment-grid { grid-template-columns: 1fr; }
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .hours-table th, .hours-table td { font-size: 12px; padding: 8px 4px; }
+      .cal-day { width: 28px; height: 28px; font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ════════════════════════════════════
+       ヘッダー
+  ════════════════════════════════════ -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-name">
+          こばやし眼科医院
+          <span>KOBAYASHI EYE CLINIC</span>
+        </div>
+      </div>
+      <nav class="global-nav">
+        <a href="#news">お知らせ</a>
+        <a href="#hours">診療時間</a>
+        <a href="#treatment">診療内容</a>
+        <a href="#access">アクセス</a>
+      </nav>
+      <div class="header-tel">
+        <div class="tel-box">
+          <div class="tel-label">お電話でのお問い合わせ</div>
+          <a href="tel:0258-37-8230">📞 0258-37-8230</a>
+        </div>
+        <a href="tel:0258-37-8230" class="reservation-btn">予約・お問い合わせ</a>
+      </div>
+      <button class="hamburger" onclick="toggleMobileNav()" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- モバイルナビ -->
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#news"      onclick="closeMobileNav()">お知らせ</a>
+    <a href="#hours"     onclick="closeMobileNav()">診療時間・カレンダー</a>
+    <a href="#treatment" onclick="closeMobileNav()">診療内容</a>
+    <a href="#access"    onclick="closeMobileNav()">アクセス</a>
+    <div class="tel-sp">📞 <a href="tel:0258-37-8230">0258-37-8230</a></div>
+  </nav>
+
+  <!-- ════════════════════════════════════
+       ヒーロースライダー
+  ════════════════════════════════════ -->
+  <section class="hero" aria-label="メインビジュアル">
+    <div class="slider-track" id="sliderTrack">
+      <!-- スライド1 -->
+      <div class="slide slide-1">
+        <div class="slide-placeholder">
+          <div class="ph-icon">👁️</div>
+          <span>スライド画像1（差し替え可能）</span>
+        </div>
+        <div class="slide-caption">
+          <h2>地域の皆様の目の健康を守ります</h2>
+          <p>新潟県長岡市曲新町 ／ 眼科専門医院</p>
+        </div>
+      </div>
+      <!-- スライド2 -->
+      <div class="slide slide-2">
+        <div class="slide-placeholder">
+          <div class="ph-icon">🔬</div>
+          <span>スライド画像2（差し替え可能）</span>
+        </div>
+        <div class="slide-caption">
+          <h2>最新の検査機器で丁寧な診療</h2>
+          <p>白内障・緑内障・ドライアイなど幅広く対応</p>
+        </div>
+      </div>
+      <!-- スライド3 -->
+      <div class="slide slide-3">
+        <div class="slide-placeholder">
+          <div class="ph-icon">🏥</div>
+          <span>スライド画像3（差し替え可能）</span>
+        </div>
+        <div class="slide-caption">
+          <h2>土曜診療・駐車場完備</h2>
+          <p>平日はもちろん土曜日もご来院いただけます</p>
+        </div>
+      </div>
+    </div>
+    <button class="slider-btn prev" id="sliderPrev" aria-label="前へ">&#8249;</button>
+    <button class="slider-btn next" id="sliderNext" aria-label="次へ">&#8250;</button>
+    <div class="slider-dots" id="sliderDots"></div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       お知らせ
+  ════════════════════════════════════ -->
+  <section class="news-bar" id="news">
+    <div class="news-bar-inner">
+      <div class="news-bar-label">お知らせ</div>
+      <div class="news-bar-list">
+        <ul id="newsList"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       診療時間 + カレンダー
+  ════════════════════════════════════ -->
+  <section class="hours-calendar-section section-wrap" id="hours">
+    <div class="container">
+      <div class="section-title">
+        <h2>診療時間・休診日カレンダー</h2>
+        <span class="en">Hours &amp; Calendar</span>
+        <span class="line"></span>
+      </div>
+      <div class="hours-calendar-grid">
+
+        <!-- 診療時間テーブル -->
+        <div class="hours-card">
+          <div class="hours-card-head">
+            <span class="icon">🕐</span>
+            <h3>診療時間</h3>
+          </div>
+          <div class="hours-card-body">
+            <table class="hours-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>月</th>
+                  <th>火</th>
+                  <th>水</th>
+                  <th class="col-thu">木</th>
+                  <th>金</th>
+                  <th>土</th>
+                  <th class="col-sun">日</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>午前<br><small>9:00〜13:00</small></th>
+                  <td class="check">●</td>
+                  <td class="check">●</td>
+                  <td class="check">●</td>
+                  <td class="thu cross">―</td>
+                  <td class="check">●</td>
+                  <td class="sat">●</td>
+                  <td class="cross">―</td>
+                </tr>
+                <tr>
+                  <th>午後<br><small>15:00〜</small></th>
+                  <td class="check">●</td>
+                  <td class="check">●</td>
+                  <td class="check">●</td>
+                  <td class="thu cross">―</td>
+                  <td class="check">●</td>
+                  <td class="sat">●<br><small style="font-size:10px;color:#888">〜17時</small></td>
+                  <td class="cross">―</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="hours-note">
+              <ul>
+                <li>午前診療：9:00〜13:00（受付は12:30まで）</li>
+                <li>午後診療：15:00〜18:00 ／ 土曜午後は17:00まで（受付16:30）</li>
+                <li><strong>木曜・日曜・祝日は休診</strong>です</li>
+                <li>臨時休診・変更はお知らせをご確認ください</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- カレンダー -->
+        <div class="calendar-card">
+          <div class="calendar-card-head">
+            <div class="cal-title-wrap">
+              <span class="icon">📅</span>
+              <h3>休診日カレンダー</h3>
+            </div>
+            <div class="cal-nav">
+              <button id="calPrev" aria-label="前月">&#8249;</button>
+              <div class="cal-month" id="calMonth"></div>
+              <button id="calNext" aria-label="次月">&#8250;</button>
+            </div>
+          </div>
+          <div class="calendar-card-body">
+            <table class="cal-table" id="calTable">
+              <thead>
+                <tr>
+                  <th class="sun">日</th>
+                  <th>月</th>
+                  <th>火</th>
+                  <th>水</th>
+                  <th>木</th>
+                  <th>金</th>
+                  <th class="sat">土</th>
+                </tr>
+              </thead>
+              <tbody id="calBody"></tbody>
+            </table>
+            <div class="cal-legend">
+              <div class="cal-legend-item"><div class="leg-dot leg-open"></div>通常診療</div>
+              <div class="cal-legend-item"><div class="leg-dot leg-sat"></div>土曜（午後17時まで）</div>
+              <div class="cal-legend-item"><div class="leg-dot leg-closed"></div>木曜休診</div>
+              <div class="cal-legend-item"><div class="leg-dot leg-holiday"></div>日曜・祝日休診</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       診療内容
+  ════════════════════════════════════ -->
+  <section class="treatment-section section-wrap" id="treatment">
+    <div class="container">
+      <div class="section-title">
+        <h2>診療内容</h2>
+        <span class="en">Treatment</span>
+        <span class="line"></span>
+      </div>
+      <div class="treatment-grid">
+        <div class="treatment-card">
+          <div class="t-icon">👁️</div>
+          <h3>一般眼科</h3>
+          <p>結膜炎・眼精疲労・視力低下など目に関するあらゆる症状に対応します。</p>
+        </div>
+        <div class="treatment-card">
+          <div class="t-icon">🔍</div>
+          <h3>白内障</h3>
+          <p>水晶体の濁りによる白内障の検査・診断・手術紹介まで丁寧に対応します。</p>
+        </div>
+        <div class="treatment-card">
+          <div class="t-icon">🩺</div>
+          <h3>緑内障</h3>
+          <p>視野検査・眼圧検査などで早期発見・早期治療を目指します。</p>
+        </div>
+        <div class="treatment-card">
+          <div class="t-icon">💧</div>
+          <h3>ドライアイ</h3>
+          <p>スマホ・パソコンの使用増加で増えているドライアイの診断と治療を行います。</p>
+        </div>
+        <div class="treatment-card">
+          <div class="t-icon">🌸</div>
+          <h3>アレルギー性結膜炎</h3>
+          <p>花粉症をはじめとするアレルギーによる目の症状の診断・治療を行います。</p>
+        </div>
+        <div class="treatment-card">
+          <div class="t-icon">🥽</div>
+          <h3>コンタクトレンズ処方</h3>
+          <p>ソフト・ハードレンズの処方を行っています。定期検査もお気軽にどうぞ。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       特徴
+  ════════════════════════════════════ -->
+  <section class="features-section section-wrap">
+    <div class="container">
+      <div class="section-title">
+        <h2>こばやし眼科の特徴</h2>
+        <span class="en">Our Features</span>
+        <span class="line"></span>
+      </div>
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="f-icon">🅿️</div>
+          <h3>駐車場完備</h3>
+          <p>お車でのご来院も安心。広い駐車場をご用意しています。</p>
+        </div>
+        <div class="feature-item">
+          <div class="f-icon">📅</div>
+          <h3>土曜診療</h3>
+          <p>土曜日も午前・午後（〜17時）診療しています。</p>
+        </div>
+        <div class="feature-item">
+          <div class="f-icon">📞</div>
+          <h3>予約診療</h3>
+          <p>お電話で予約受付しています。待ち時間の短縮にご活用ください。</p>
+        </div>
+        <div class="feature-item">
+          <div class="f-icon">🏠</div>
+          <h3>地域密着</h3>
+          <p>長岡市曲新町で地域の皆様の目の健康をサポートします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       アクセス
+  ════════════════════════════════════ -->
+  <section class="access-section section-wrap" id="access">
+    <div class="container">
+      <div class="section-title">
+        <h2>アクセス</h2>
+        <span class="en">Access</span>
+        <span class="line"></span>
+      </div>
+      <div class="access-grid">
+        <div class="access-info">
+          <h3>こばやし眼科医院</h3>
+          <dl>
+            <dt>住所</dt>
+            <dd>〒940-1103<br>新潟県長岡市曲新町687</dd>
+            <dt>電話</dt>
+            <dd><a href="tel:0258-37-8230">0258-37-8230</a></dd>
+            <dt>診療科目</dt>
+            <dd>眼科</dd>
+            <dt>診療時間</dt>
+            <dd>
+              月・火・水・金：午前9:00〜13:00 / 午後15:00〜18:00<br>
+              土：午前9:00〜13:00 / 午後15:00〜17:00<br>
+              木・日・祝：<strong>休診</strong>
+            </dd>
+            <dt>駐車場</dt>
+            <dd>あり</dd>
+            <dt>交通</dt>
+            <dd>
+              JR信越本線 宮内駅より徒歩11分<br>
+              長岡駅東口より「曲新町」バス停徒歩1分<br>
+              関越自動車道 長岡ICより約5.9km
+            </dd>
+          </dl>
+        </div>
+        <!-- ▼ Googleマップ：以下のdivをiframeに置き換えてください -->
+        <div class="map-wrap" id="mapPlaceholder">
+          <div class="map-icon">🗺️</div>
+          <span>Googleマップを後で追加</span>
+          <span style="font-size:11px;color:#AAB;">（このdivをiframeに置き換えてください）</span>
+        </div>
+        <!-- ▲ 例：
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d..."
+          width="100%" height="360" style="border:0;border-radius:12px;"
+          allowfullscreen="" loading="lazy">
+        </iframe>
+        -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       フッター
+  ════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <!-- ロゴ・連絡先 -->
+        <div>
+          <div class="footer-logo-name">
+            こばやし眼科医院
+            <span>KOBAYASHI EYE CLINIC</span>
+          </div>
+          <p class="footer-desc">新潟県長岡市曲新町に位置する眼科専門医院です。地域の皆様の目の健康を守るため、丁寧な診療を心がけています。</p>
+          <div class="footer-tel-large"><a href="tel:0258-37-8230">0258-37-8230</a></div>
+          <div class="footer-tel-label">受付時間：月〜金 9:00〜18:00 ／ 土 9:00〜17:00</div>
+        </div>
+        <!-- ナビ -->
+        <div class="footer-col">
+          <h4>メニュー</h4>
+          <ul>
+            <li><a href="#news">お知らせ</a></li>
+            <li><a href="#hours">診療時間・カレンダー</a></li>
+            <li><a href="#treatment">診療内容</a></li>
+            <li><a href="#access">アクセス</a></li>
+          </ul>
+        </div>
+        <!-- 診療情報 -->
+        <div class="footer-col">
+          <h4>診療情報</h4>
+          <div class="info-row">
+            <strong>住所</strong><br>
+            〒940-1103<br>新潟県長岡市曲新町687
+          </div>
+          <div class="info-row">
+            <strong>休診日</strong><br>
+            木曜・日曜・祝日
+          </div>
+          <div class="info-row">
+            <strong>駐車場</strong>：あり
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 こばやし眼科医院. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ページトップ -->
+  <button class="pagetop" id="pagetop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="ページトップへ">▲</button>
+
+  <!-- ════════════════════════════════════
+       JavaScript
+  ════════════════════════════════════ -->
+  <script>
+    /* ============================================================
+       スクロール位置をトップに固定
+    ============================================================ */
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    document.documentElement.style.scrollBehavior = 'auto';
+    window.scrollTo(0, 0);
+    window.addEventListener('load', () => {
+      document.documentElement.style.scrollBehavior = '';
+    });
+
+    /* ============================================================
+       📝 更新ガイド
+       ① お知らせ  → NEWS_ITEMS 配列を編集（新しいものを上に）
+       ② 臨時休診  → EXTRA_CLOSED に日付を追加
+       ③ 祝日更新  → HOLIDAYS 配列を編集
+    ============================================================ */
+
+    // ── ① お知らせ ───────────────────────────────────────────
+    const NEWS_ITEMS = [
+      { date: '2026.05.10', badge: 'new',       text: 'ホームページを開設しました。' },
+      { date: '2026.05.01', badge: 'important', text: '発熱・かぜ症状のある方は事前にお電話でご相談ください。' },
+      { date: '2026.04.01', badge: 'info',      text: '令和8年度の特定健診が始まりました。対象の方はお申し込みください。' },
+    ];
+
+    // ── ② 臨時休診日（年月ごとに日にちを配列で指定） ────────
+    // 例: '2026-06': [15, 22] → 6月15日・22日が臨時休診
+    const EXTRA_CLOSED = {
+      '2026-05': [],
+      '2026-06': [],
+      '2026-07': [],
+      '2026-08': [],
+    };
+
+    // ── ③ 2026年の祝日 ───────────────────────────────────────
+    const HOLIDAYS = [
+      '2026-01-01','2026-01-12',
+      '2026-02-11','2026-02-23',
+      '2026-03-20',
+      '2026-04-29',
+      '2026-05-03','2026-05-04','2026-05-05','2026-05-06',
+      '2026-07-20',
+      '2026-08-11',
+      '2026-09-21','2026-09-22','2026-09-23',
+      '2026-10-12',
+      '2026-11-03','2026-11-23',
+      '2026-12-23',
+    ];
+
+    /* ============================================================
+       お知らせ描画
+    ============================================================ */
+    const BADGE_CLASS = { important:'badge-important', info:'badge-info', new:'badge-new' };
+    const BADGE_TEXT  = { important:'重要', info:'お知らせ', new:'NEW' };
+
+    const newsList = document.getElementById('newsList');
+    NEWS_ITEMS.forEach(item => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <span class="date">${item.date}</span>
+        <span class="badge ${BADGE_CLASS[item.badge] || 'badge-info'}">${BADGE_TEXT[item.badge] || 'お知らせ'}</span>
+        <span>${item.text}</span>`;
+      newsList.appendChild(li);
+    });
+
+    /* ============================================================
+       カレンダー描画
+    ============================================================ */
+    const today   = new Date();
+    let calYear   = today.getFullYear();
+    let calMonth  = today.getMonth(); // 0-indexed
+
+    function isHoliday(y, m, d) {
+      const key = `${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+      return HOLIDAYS.includes(key);
+    }
+    function isExtraClosed(y, m, d) {
+      const key = `${y}-${String(m+1).padStart(2,'0')}`;
+      return (EXTRA_CLOSED[key] || []).includes(d);
+    }
+    function isClosed(y, m, d, dow) {
+      // 日曜 (0) → 休診
+      if (dow === 0) return 'sun';
+      // 木曜 (4) → 休診
+      if (dow === 4) return 'thu';
+      // 祝日 → 休診
+      if (isHoliday(y, m, d)) return 'holiday';
+      // 臨時休診
+      if (isExtraClosed(y, m, d)) return 'extra';
+      // 土曜 → 特別
+      if (dow === 6) return 'sat';
+      return 'open';
+    }
+
+    function renderCalendar() {
+      const y = calYear;
+      const m = calMonth;
+      document.getElementById('calMonth').textContent = `${y}年 ${m+1}月`;
+
+      const firstDay = new Date(y, m, 1).getDay(); // 0=Sun
+      const lastDate = new Date(y, m+1, 0).getDate();
+
+      const body = document.getElementById('calBody');
+      body.innerHTML = '';
+
+      let date = 1;
+      for (let row = 0; row < 6; row++) {
+        const tr = document.createElement('tr');
+        for (let col = 0; col < 7; col++) {
+          const td = document.createElement('td');
+          if (row === 0 && col < firstDay || date > lastDate) {
+            td.innerHTML = '';
+          } else {
+            const dow    = col; // 0=Sun…6=Sat
+            const status = isClosed(y, m, date, dow);
+            const isToday = (y === today.getFullYear() && m === today.getMonth() && date === today.getDate());
+
+            let cls = 'cal-day ';
+            switch(status) {
+              case 'sun':     cls += isToday ? 'day-sun day-today'     : 'day-sun';     break;
+              case 'thu':     cls += isToday ? 'day-thu day-today'     : 'day-thu';     break;
+              case 'holiday': cls += isToday ? 'day-holiday day-today' : 'day-holiday'; break;
+              case 'extra':   cls += isToday ? 'day-closed day-today'  : 'day-closed';  break;
+              case 'sat':     cls += isToday ? 'day-sat day-today'     : 'day-sat';     break;
+              default:        cls += isToday ? 'day-open day-today'    : 'day-open';    break;
+            }
+            td.innerHTML = `<span class="${cls}">${date}</span>`;
+            date++;
+          }
+          tr.appendChild(td);
+        }
+        body.appendChild(tr);
+        if (date > lastDate) break;
+      }
+    }
+
+    document.getElementById('calPrev').onclick = () => {
+      calMonth--;
+      if (calMonth < 0) { calMonth = 11; calYear--; }
+      renderCalendar();
+    };
+    document.getElementById('calNext').onclick = () => {
+      calMonth++;
+      if (calMonth > 11) { calMonth = 0; calYear++; }
+      renderCalendar();
+    };
+    renderCalendar();
+
+    /* ============================================================
+       ヒーロースライダー（右→左オートスワイプ）
+    ============================================================ */
+    const track  = document.getElementById('sliderTrack');
+    const dotsEl = document.getElementById('sliderDots');
+    const slides = document.querySelectorAll('.slide');
+    let current  = 0;
+    let timer;
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement('div');
+      dot.className = 'dot' + (i === 0 ? ' active' : '');
+      dot.onclick = () => { goTo(i); startTimer(); };
+      dotsEl.appendChild(dot);
+    });
+
+    function goTo(idx) {
+      current = (idx + slides.length) % slides.length;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+    function startTimer() {
+      clearInterval(timer);
+      timer = setInterval(() => goTo(current + 1), 4500);
+    }
+    document.getElementById('sliderPrev').onclick = () => { goTo(current - 1); startTimer(); };
+    document.getElementById('sliderNext').onclick = () => { goTo(current + 1); startTimer(); };
+    startTimer();
+
+    /* ============================================================
+       スクロール（ヘッダー固定 / ページトップ）
+    ============================================================ */
+    const header  = document.getElementById('siteHeader');
+    const pagetop = document.getElementById('pagetop');
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      header.classList.toggle('scrolled', y > 50);
+      pagetop.classList.toggle('show', y > 300);
+    });
+
+    /* ============================================================
+       モバイルナビ
+    ============================================================ */
+    function toggleMobileNav() {
+      document.getElementById('mobileNav').classList.toggle('open');
+    }
+    function closeMobileNav() {
+      document.getElementById('mobileNav').classList.remove('open');
+    }
+  </script>
+</body>
+</html>
