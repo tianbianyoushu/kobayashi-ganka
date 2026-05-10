@@ -740,6 +740,40 @@
     .pagetop:hover { transform: translateY(-3px); }
 
     /* ══════════════════════════════════════
+       ページオーバーレイ（ディソルブ用）
+    ══════════════════════════════════════ */
+    #page-overlay {
+      position: fixed;
+      inset: 0;
+      background: #fff;
+      z-index: 9998;
+      pointer-events: none;
+      opacity: 1;
+      transition: opacity 0.65s ease;
+    }
+    #page-overlay.hidden { opacity: 0; }
+
+    /* ══════════════════════════════════════
+       スクロールトリガー フェードイン
+    ══════════════════════════════════════ */
+    [data-scroll] {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+      will-change: opacity, transform;
+    }
+    [data-scroll].is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    [data-scroll-delay="1"] { transition-delay: 0.08s; }
+    [data-scroll-delay="2"] { transition-delay: 0.16s; }
+    [data-scroll-delay="3"] { transition-delay: 0.24s; }
+    [data-scroll-delay="4"] { transition-delay: 0.32s; }
+    [data-scroll-delay="5"] { transition-delay: 0.40s; }
+    [data-scroll-delay="6"] { transition-delay: 0.48s; }
+
+    /* ══════════════════════════════════════
        レスポンシブ
     ══════════════════════════════════════ */
     @media (max-width: 900px) {
@@ -871,7 +905,7 @@
   ════════════════════════════════════ -->
   <section class="hours-calendar-section section-wrap" id="hours">
     <div class="container">
-      <div class="section-title">
+      <div class="section-title" data-scroll>
         <h2>診療時間・休診日カレンダー</h2>
         <span class="en">Hours &amp; Calendar</span>
         <span class="line"></span>
@@ -879,7 +913,7 @@
       <div class="hours-calendar-grid">
 
         <!-- 診療時間テーブル -->
-        <div class="hours-card">
+        <div class="hours-card" data-scroll data-scroll-delay="1">
           <div class="hours-card-head">
             <span class="icon">🕐</span>
             <h3>診療時間</h3>
@@ -933,7 +967,7 @@
         </div>
 
         <!-- カレンダー -->
-        <div class="calendar-card">
+        <div class="calendar-card" data-scroll data-scroll-delay="2">
           <div class="calendar-card-head">
             <div class="cal-title-wrap">
               <span class="icon">📅</span>
@@ -978,38 +1012,38 @@
   ════════════════════════════════════ -->
   <section class="treatment-section section-wrap" id="treatment">
     <div class="container">
-      <div class="section-title">
+      <div class="section-title" data-scroll>
         <h2>診療内容</h2>
         <span class="en">Treatment</span>
         <span class="line"></span>
       </div>
       <div class="treatment-grid">
-        <div class="treatment-card">
+        <div class="treatment-card" data-scroll data-scroll-delay="1">
           <div class="t-icon">👁️</div>
           <h3>一般眼科</h3>
           <p>結膜炎・眼精疲労・視力低下など目に関するあらゆる症状に対応します。</p>
         </div>
-        <div class="treatment-card">
+        <div class="treatment-card" data-scroll data-scroll-delay="2">
           <div class="t-icon">🔍</div>
           <h3>白内障</h3>
           <p>水晶体の濁りによる白内障の検査・診断・手術紹介まで丁寧に対応します。</p>
         </div>
-        <div class="treatment-card">
+        <div class="treatment-card" data-scroll data-scroll-delay="3">
           <div class="t-icon">🩺</div>
           <h3>緑内障</h3>
           <p>視野検査・眼圧検査などで早期発見・早期治療を目指します。</p>
         </div>
-        <div class="treatment-card">
+        <div class="treatment-card" data-scroll data-scroll-delay="4">
           <div class="t-icon">💧</div>
           <h3>ドライアイ</h3>
           <p>スマホ・パソコンの使用増加で増えているドライアイの診断と治療を行います。</p>
         </div>
-        <div class="treatment-card">
+        <div class="treatment-card" data-scroll data-scroll-delay="5">
           <div class="t-icon">🌸</div>
           <h3>アレルギー性結膜炎</h3>
           <p>花粉症をはじめとするアレルギーによる目の症状の診断・治療を行います。</p>
         </div>
-        <div class="treatment-card">
+        <div class="treatment-card" data-scroll data-scroll-delay="6">
           <div class="t-icon">🥽</div>
           <h3>コンタクトレンズ処方</h3>
           <p>ソフト・ハードレンズの処方を行っています。定期検査もお気軽にどうぞ。</p>
@@ -1023,28 +1057,28 @@
   ════════════════════════════════════ -->
   <section class="features-section section-wrap">
     <div class="container">
-      <div class="section-title">
+      <div class="section-title" data-scroll>
         <h2>こばやし眼科の特徴</h2>
         <span class="en">Our Features</span>
         <span class="line"></span>
       </div>
       <div class="features-grid">
-        <div class="feature-item">
+        <div class="feature-item" data-scroll data-scroll-delay="1">
           <div class="f-icon">🅿️</div>
           <h3>駐車場完備</h3>
           <p>お車でのご来院も安心。広い駐車場をご用意しています。</p>
         </div>
-        <div class="feature-item">
+        <div class="feature-item" data-scroll data-scroll-delay="2">
           <div class="f-icon">📅</div>
           <h3>土曜診療</h3>
           <p>土曜日も午前・午後（〜17時）診療しています。</p>
         </div>
-        <div class="feature-item">
+        <div class="feature-item" data-scroll data-scroll-delay="3">
           <div class="f-icon">📞</div>
           <h3>予約診療</h3>
           <p>お電話で予約受付しています。待ち時間の短縮にご活用ください。</p>
         </div>
-        <div class="feature-item">
+        <div class="feature-item" data-scroll data-scroll-delay="4">
           <div class="f-icon">🏠</div>
           <h3>地域密着</h3>
           <p>長岡市曲新町で地域の皆様の目の健康をサポートします。</p>
@@ -1058,13 +1092,13 @@
   ════════════════════════════════════ -->
   <section class="access-section section-wrap" id="access">
     <div class="container">
-      <div class="section-title">
+      <div class="section-title" data-scroll>
         <h2>アクセス</h2>
         <span class="en">Access</span>
         <span class="line"></span>
       </div>
       <div class="access-grid">
-        <div class="access-info">
+        <div class="access-info" data-scroll data-scroll-delay="1">
           <h3>こばやし眼科医院</h3>
           <dl>
             <dt>住所</dt>
@@ -1090,7 +1124,7 @@
           </dl>
         </div>
         <!-- ▼ Googleマップ：以下のdivをiframeに置き換えてください -->
-        <div class="map-wrap" id="mapPlaceholder">
+        <div class="map-wrap" id="mapPlaceholder" data-scroll data-scroll-delay="2">
           <div class="map-icon">🗺️</div>
           <span>Googleマップを後で追加</span>
           <span style="font-size:11px;color:#AAB;">（このdivをiframeに置き換えてください）</span>
@@ -1157,6 +1191,9 @@
   <!-- ページトップ -->
   <button class="pagetop" id="pagetop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="ページトップへ">▲</button>
 
+  <!-- ディソルブオーバーレイ -->
+  <div id="page-overlay"></div>
+
   <!-- ════════════════════════════════════
        JavaScript
   ════════════════════════════════════ -->
@@ -1171,6 +1208,70 @@
     window.scrollTo(0, 0);
     window.addEventListener('load', () => {
       document.documentElement.style.scrollBehavior = '';
+    });
+
+    /* ============================================================
+       ディソルブ（ページ全体フェードイン on load）
+    ============================================================ */
+    const overlay = document.getElementById('page-overlay');
+    // ページ読み込み完了後にフェードアウト
+    window.addEventListener('load', () => {
+      requestAnimationFrame(() => {
+        overlay.classList.add('hidden');
+      });
+    });
+
+    /* ============================================================
+       ナビリンクのディソルブ遷移
+    ============================================================ */
+    function dissolveScrollTo(targetId) {
+      // フェードイン（白く覆う）
+      overlay.classList.remove('hidden');
+      overlay.style.transition = 'opacity 0.3s ease';
+      setTimeout(() => {
+        const el = document.getElementById(targetId);
+        if (el) {
+          const y = el.getBoundingClientRect().top + window.scrollY
+                    - parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h'));
+          window.scrollTo({ top: y, behavior: 'instant' });
+        }
+        // フェードアウト（コンテンツを見せる）
+        overlay.style.transition = 'opacity 0.55s ease';
+        requestAnimationFrame(() => {
+          overlay.classList.add('hidden');
+        });
+      }, 320);
+    }
+
+    // ナビリンクにイベント登録
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', e => {
+        const hash = link.getAttribute('href').slice(1);
+        if (document.getElementById(hash)) {
+          e.preventDefault();
+          dissolveScrollTo(hash);
+          document.getElementById('mobileNav').classList.remove('open');
+        }
+      });
+    });
+
+    /* ============================================================
+       スクロールトリガー フェードイン（IntersectionObserver）
+    ============================================================ */
+    const scrollObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          scrollObserver.unobserve(entry.target); // 一度だけ発火
+        }
+      });
+    }, {
+      threshold: 0.12,   // 12%見えたら発火
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    document.querySelectorAll('[data-scroll]').forEach(el => {
+      scrollObserver.observe(el);
     });
 
     /* ============================================================
@@ -1356,6 +1457,7 @@
     function toggleMobileNav() {
       document.getElementById('mobileNav').classList.toggle('open');
     }
+    // closeMobileNav は dissolveScrollTo 内で処理しているため不要だが互換のため残す
     function closeMobileNav() {
       document.getElementById('mobileNav').classList.remove('open');
     }
